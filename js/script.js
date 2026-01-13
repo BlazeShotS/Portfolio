@@ -71,7 +71,17 @@ window.addEventListener('scroll', reveal);
 /*Para mi menu amburguesa*/
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
+const navItems = document.querySelectorAll('.nav-links a');
+
 
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    menuToggle.classList.toggle('active');
+});
+
+/*Se cierra al dar un click en un link*/
+navItems.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+    });
 });
