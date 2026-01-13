@@ -66,29 +66,12 @@ window.addEventListener('load', () => {
 });
 window.addEventListener('scroll', reveal);
 
-/* --- EMAILJS --- */
-emailjs.init("3QstBdAa4sADJEbs7");
 
-document.getElementById('contactForm')?.addEventListener('submit', function(e) {
-    e.preventDefault();
 
-    const btn = this.querySelector('.btn-submit');
-    const originalText = btn.textContent;
+/*Para mi menu amburguesa*/
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-    btn.textContent = currentLang === 'es' ? '¡Enviando...!' : 'Sending...!';
-    btn.disabled = true;
-
-    emailjs.sendForm('service_mjidhi4', 'template_mom2y0b', this)
-        .then(() => {
-            btn.textContent = currentLang === 'es'
-                ? '¡Mensaje enviado!'
-                : 'Message Sent!';
-            btn.style.background = '#10b981';
-            this.reset();
-        })
-        .catch(err => {
-            alert('Error: ' + err.text);
-            btn.textContent = originalText;
-            btn.disabled = false;
-        });
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
 });
