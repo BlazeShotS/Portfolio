@@ -24,6 +24,11 @@
      scroll-behavior: smooth;
  }
 
+ html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
  /* --- NAVEGACIÓN --- */
  nav {
      position: fixed;
@@ -155,9 +160,14 @@
 
  /* --- SECCIONES (section) GENERALES --- */
  section {
-     padding: 6rem 10%;
+     padding: 6rem 1.5rem;
  }
 
+ @media (min-width: 1024px) {
+    section {
+        padding: 6rem 10%;
+    }
+}
  .section-header {
      margin-bottom: 4rem;
  }
