@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abel Durand Palacios | Software Engineer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="logo">ABEL DURAND<span>.</span></div>
+        <div class="nav-right">
+            <div class="nav-links">
+                <a href="#inicio" data-es="Inicio" data-en="Home">Inicio</a>
+                <a href="#acerca-de" data-es="Acerca de" data-en="About">Acerca de</a>
+                <a href="#habilidades" data-es="Habilidades" data-en="Skills">Habilidades</a>
+                <a href="#proyectos" data-es="Proyectos" data-en="Projects">Proyectos</a>
+                <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
+            </div>
+            <button class="lang-switch" onclick="toggleLanguage()">EN / ES</button>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <span class="hero-subtitle" data-es="Software Engineer" data-en="Software Engineer">Software Engineer</span>
+        <h1>Abel Durand <br> <span class="typewriter" id="typewriter"></span></h1>
+        <!--aca , entra js cuando hace se muestra el efecto de escribir-->
+        <p class="hero-desc"
+            data-es="Ingeniero Full Stack especializado en construir sistemas escalables y de alto rendimiento. Enfocado en la excelencia técnica y la resolución de problemas complejos."
+            data-en="Full Stack Engineer specialized in building scalable and high-performance systems. Focused on technical excellence and solving complex problems.">
+            Ingeniero Full Stack especializado en construir sistemas escalables y de alto rendimiento. Enfocado en las
+            buenas prácticas y la resolución de problemas.
+        </p>
+        <div style="display: flex; gap: 2rem; align-items: center;">
+            <a href="https://github.com/BlazeShotS?tab=repositories" target="_blank" class="btn-submit"
+                style="text-decoration: none; display: inline-block; padding: 1.2rem 2.5rem;" data-es="Ver mi trabajo"
+                data-en="View my work">Ver mi trabajo</a>
+        </div>
+    </section>
+
+    <section id="acerca-de" class="about-section">
+        <div class="about-grid">
+            <div class="about-content reveal">
+                <div class="section-header">
+                    <span data-es="MI PERFIL" data-en="MY PROFILE">MI PERFIL</span>
+                    <h2 data-es="Acerca de mí" data-en="About me">Acerca de mí</h2>
+                </div>
+                <p data-es="Soy un desarrollador apasionado por la arquitectura limpia y el código eficiente. Con experiencia en diversos sectores tecnológicos, me especializo en transformar requerimientos de negocio en soluciones técnicas robustas."
+                    data-en="I am a developer passionate about clean architecture and efficient code. With experience in various tech sectors, I specialize in transforming business requirements into robust technical solutions.">
+                    Soy un desarrollador apasionado por la arquitectura limpia y el código eficiente. Cuento con
+                    experiencia en desarrollo backend y frontend,
+                    así como en despliegue de aplicaciones, me especializo en transformar requerimientos de negocio en
+                    soluciones técnicas robustas y escalables.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3>+2</h3>
+                        <p data-es="AÑOS EXP." data-en="YEARS EXP.">AÑOS EXP.</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p data-es="COMPROMISO" data-en="COMMITMENT">PROYECTOS COMPLETADOS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="reveal" style="display: flex; justify-content: center;">
+                <div class="about-photo">
+                    <img src="img/abel.png" alt="Foto de Abel Durand">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="habilidades">
+        <div class="section-header reveal">
+            <span data-es="CAPACIDADES" data-en="CAPABILITIES">CAPACIDADES</span>
+            <h2 data-es="Stack de Tecnologías" data-en="Technology Stack">Stack de Tecnologías</h2>
+        </div>
+
+        <div class="skills-grid">
+            <!-- Backend -->
+            <div class="skill-card reveal">
+                <h3 data-es="Dominio Backend" data-en="Backend Domain"><i class="fas fa-code-branch"
+                        style="color: var(--primary);"></i> Dominio Backend</h3>
+                <div class="tech-list">
+                    <div class="tech-item"><i class="fab fa-java"></i> Java 17+</div>
+                    <div class="tech-item"><i class="fas fa-leaf"></i> Spring Boot</div>
+                    <div class="tech-item"><i class="fab fa-python"></i> Python </div>
+                    <div class="tech-item"><i class="fas fa-leaf"></i> Django</div>
+                    <br>
+                    <div class="tech-item"><i class="fab fa-php"></i> PHP</div>
+                    <div class="tech-item"><i class="fab fa-laravel"></i> Laravel</div>
+                </div>
+            </div>
+
+            <!-- Frontend -->
+            <div class="skill-card reveal">
+                <h3 data-es="Frontend Moderno" data-en="Modern Frontend"><i class="fas fa-magic"
+                        style="color: var(--primary);"></i> Frontend Moderno</h3>
+                <div class="tech-list">
+                    <div class="tech-item"><i class="fab fa-angular"></i> TypeScript & Angular </div>
+                    <div class="tech-item"><i class="fab fa-html5"></i> HTML </div>
+                    <div class="tech-item"><i class="fab fa-css3-alt"></i> CSS </div>
+                    <div class="tech-item"><i class="fab fa-js"></i> JS </div>
+                    <div class="tech-item"><i class="fab fa-sass" style="color: #cc6699;"></i> SASS / CSS3</div>
+                    <div class="tech-item"><i class="fab fa-bootstrap"></i> Bootstrap 5</div>
+                </div>
+            </div>
+
+            <!-- Ops -->
+            <div class="skill-card reveal">
+                <h3 data-es="DevOps & Cloud" data-en="DevOps & Cloud"><i class="fas fa-cloud-upload-alt"
+                        style="color: var(--primary);"></i> DevOps & Cloud</h3>
+                <div class="tech-list">
+                    <div class="tech-item"><i class="fab fa-aws"></i> AWS Cloud</div>
+                    <div class="tech-item"><i class="fas fa-server"></i> EC2</div>
+                    <div class="tech-item"><i class="fas fa-database"></i> RDS</div>
+                    <div class="tech-item"><i class="fas fa-cloud"></i> Vercel</div>
+                    <div class="tech-item"><i class="fab fa-git-alt" style="color: #f05032;"></i> Git / GitHub</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="projects-section">
+        <div class="section-header reveal">
+            <span data-es="PORTAFOLIO" data-en="PORTFOLIO">PORTAFOLIO</span>
+            <h2 data-es="Proyectos Destacados" data-en="Featured Projects">Proyectos Destacados</h2>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card reveal">
+                <a href="https://github.com/BlazeShotS/Matricula-Universitaria" target="_blank" class="project-link">
+                    <div class="project-img">
+                        <img src="img/Matricula.jpg" alt="Matrícula">
+                    </div>
+                    <div class="project-info">
+                        <h4 data-es="Matrículas / Spring & Angular" data-en="Registration System">Matrículas / Spring &
+                            Angular</h4>
+                        <p data-es="Proyecto desarrollado con Java Spring Boot para el backend y TypeScript con Angular para el frontend, utilizando autenticación JWT. Este sistema permite que los estudiantes de la Universidad Nova se matriculen según su mérito, evitando sobrecargas en el sistema y asegurando que todos puedan matricularse en la fecha indicada."
+                            data-en="Project developed using Java Spring Boot for the backend and TypeScript with Angular for the frontend, utilizing JWT authentication. This system allows Nova University students to enroll based on merit, preventing system overload and ensuring that everyone can enroll on the designated date.">
+                            Proyecto desarrollado con Java Spring Boot para el backend y TypeScript con Angular para el
+                            frontend, utilizando autenticación JWT. Este sistema permite que los estudiantes de la
+                            Universidad Nova se matriculen según su mérito, evitando sobrecargas en el sistema y
+                            asegurando que todos puedan matricularse en la fecha indicada.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card reveal">
+                <a href="https://github.com/BlazeShotS/Sistema-Libreria" target="_blank" class="project-link">
+                    <div class="project-img">
+                        <img src="img/Libreria.jpg" alt="Librería">
+                    </div>
+                    <div class="project-info">
+                        <h4 data-es="Librería / Python & Django" data-en="Library / Python & Django">Librería / Python &
+                            Django</h4>
+                        <p data-es="Proyecto desarrollado con Python y Django. Este sistema permite que los clientes de la librería realicen sus compras a través de la plataforma web, mejorando la experiencia de usuario y facilitando el trabajo del personal."
+                            data-en="Project developed using Python and Django. This system allows library customers to make purchases through the web platform, improving the user experience and facilitating the staff's work.">
+                            Proyecto desarrollado con Python y Django. Este sistema permite que los clientes de la
+                            librería realicen sus compras a través de la plataforma web, mejorando la experiencia de
+                            usuario y facilitando el trabajo del personal.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card reveal">
+                <a href="https://github.com/BlazeShotS/Deportes" target="_blank" class="project-link">
+                    <div class="project-img">
+                        <img src="img/Deportes.jpg" alt="Deportes">
+                    </div>
+                    <div class="project-info">
+                        <h4 data-es="Deportes / PHP" data-en="Sports / PHP">Deportes / PHP</h4>
+                        <p data-es="Proyecto desarrollado con PHP. Este sistema está orientado al sector deportivo, permitiendo que los clientes realicen compras en línea, mientras que los trabajadores pueden gestionar productos, categorías y usuarios de manera eficiente."
+                            data-en="Project developed using PHP. This system is aimed at the sports sector, allowing clients to make online purchases while staff can efficiently manage products, categories, and users.">
+                            Proyecto desarrollado con PHP. Este sistema está orientado al sector deportivo, permitiendo
+                            que los clientes realicen compras en línea, mientras que los trabajadores pueden gestionar
+                            productos, categorías y usuarios de manera eficiente.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="project-card reveal">
+                <a href="https://github.com/BlazeShotS/Tienda-Celulares-Marcos-de-Desarrollo-" target="_blank"
+                    class="project-link">
+                    <div class="project-img">
+                        <img src="img/MovilTech.jpg" alt="MovilTech">
+                    </div>
+                    <div class="project-info">
+                        <h4 data-es="Movil/ Java & Thymeleaf" data-en="MovilTech / Java & Thymeleaf">Movil / Java &
+                            Thymeleaf</h4>
+                        <p data-es="Proyecto desarrollado con Java Spring Boot y Thymeleaf para renderizado. Este sistema está diseñado para tiendas de tecnología que venden celulares al por mayor y menor. Se desarrolló un e-commerce para facilitar las compras en línea y optimizar la experiencia del usuario."
+                            data-en="Project developed using Java Spring Boot and Thymeleaf for rendering. This system is designed for tech stores that sell mobile phones wholesale and retail. An e-commerce platform was developed to simplify online purchases and enhance the user experience.">
+                            Proyecto desarrollado con Java Spring Boot y Thymeleaf para renderizado. Este sistema está
+                            diseñado para tiendas de tecnología que venden celulares al por mayor y menor. Se desarrolló
+                            un e-commerce para facilitar las compras en línea y optimizar la experiencia del usuario.
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+     <section id="contacto" class="contact-section">
+        <div class="reveal" style="text-align: center;">
+            <div class="section-header">
+                <span data-es="CONTÁCTAME" data-en="GET IN TOUCH">CONTÁCTAME</span>
+                <h2 data-es="¿Trabajamos juntos?" data-en="Let's build together?">¿Trabajamos juntos?</h2>
+            </div>
+        </div>
+
+        <div class="contact-grid">
+            <!-- Email -->
+            <a href="mailto:abelpaulo.durandpalacios21@gmail.com" class="contact-card">
+                <i class="fas fa-envelope-open-text"></i>
+                <h4 data-es="Enviar Email" data-en="Send Email">Enviar Email</h4>
+                <p>abelpaulo.durandpalacios21@gmail.com</p>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/51922382875" target="_blank" class="contact-card">
+                <i class="fab fa-whatsapp"></i>
+                <h4 data-es="WhatsApp Directo" data-en="Direct WhatsApp">WhatsApp Directo</h4>
+                <p>+51 922 382 875</p>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/abelpaulodurandpalacios/" target="_blank" class="contact-card">
+                <i class="fab fa-linkedin-in"></i>
+                <h4 data-es="LinkedIn Perfil" data-en="LinkedIn Profile">Linkedin Perfil</h4>
+                <p>in/abelpaulodurandpalacios</p>
+            </a>
+
+            <!-- GitHub -->
+            <a href="https://github.com/BlazeShotS" target="_blank" class="contact-card">
+                <i class="fab fa-github"></i>
+                <h4 data-es="Código Fuente" data-en="Source Code">Código Fuente</h4>
+                <p>github.com/BlazeShotS</p>
+            </a>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div data-es="© 2024 Abel Durand — Software Engineer" data-en="© 2024 Abel Durand — Software Engineer">© 2026
+            Abel Durand — Software Engineer
+        </div>
+        <div>922382875</div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    
+</body>
+
+</html>
