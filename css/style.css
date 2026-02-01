@@ -164,6 +164,7 @@
 
  }
 
+ /*Estilos para ese efecto del banner*/
  #hero-canvas {
      position: absolute;
      top: 0;
@@ -174,8 +175,6 @@
 
  }
 
-
-
  /* Contenido (Encima de todo) */
  .hero>*:not(#hero-canvas):not(.hero-overlay) {
      position: relative;
@@ -183,6 +182,8 @@
     /* CLAVE: Hace que el texto sea "transparente" a los clics */
     pointer-events: none;
  }
+
+
 
  /* --- SECCIONES (section) GENERALES --- */
  section {
@@ -496,6 +497,23 @@
      padding: 0.3rem 0.8rem;
      border-radius: 4px;
  }
+
+  .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: rgba(0, 102, 255, 0.1);
+            color: var(--primary-blue);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            border: 1px solid rgba(0, 102, 255, 0.3);
+        }
 
  /*---CONTACTANOS--*/
 
