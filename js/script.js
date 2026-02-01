@@ -130,8 +130,12 @@ particlesJS('hero-canvas', {
      * para que no haya delay tras la inactividad.
      */
 function keepAlive() {
-    // Un cambio invisible que obliga a la CPU a estar lista
-    document.body.style.opacity = document.body.style.opacity === "0.999" ? "1" : "0.999";
+    const canvas = document.querySelector('#hero-canvas canvas');
+    if (canvas) {
+        // Aplicamos un cambio de escala mínimo (insignificante para el ojo)
+        // que obliga al motor de renderizado a mantenerse activo.
+        canvas.style.transform = canvas.style.transform === "scale(1.0001)" ? "scale(1)" : "scale(1.0001)";
+    }
     requestAnimationFrame(keepAlive);
 }
 requestAnimationFrame(keepAlive);
