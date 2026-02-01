@@ -93,7 +93,7 @@ navItems.forEach(link => {
 particlesJS('hero-canvas', {
     "particles": {
         "number": {
-            "value": 80,  /* Aumentado de 80 para más densidad */
+            "value": 100,  /* Aumentado de 80 para más densidad */
             "density": { "enable": true, "value_area": 800 }
         },
         "color": { "value": "#0066ff" },
@@ -124,3 +124,31 @@ particlesJS('hero-canvas', {
     "retina_detect": true
 });
 
+
+
+// Este código evita el "lag" o tirón que ocurre al volver a hacer scroll después de estar varios segundos inactivo.
+// Cuando el usuario osea yo sale de la sección hero, se pausa la animación de partículas.Esto evita que la animación siga ejecutándose en segundo plano,
+// ya que el navegador reduce la frecuencia de actualización cuando no hay actividad.
+
+// Al volver a la sección hero, se reactivan las partículas y se fuerza un refresh,
+// asegurando que la animación vuelva a ejecutarse de forma fluida y sin retrasos.
+let particlesActive = true;
+
+window.addEventListener('scroll', () => {
+    const hero = document.querySelector('.hero');
+    const rect = hero.getBoundingClientRect();
+    const pJS = pJSDom[0].pJS;
+
+    // Salimos del hero → pausamos
+    if (rect.bottom < 0 && particlesActive) {
+        pJS.particles.move.enable = false;
+        particlesActive = false;
+    }
+
+    // Volvemos al hero → reactivamos + refresh
+    if (rect.bottom >= 0 && !particlesActive) {
+        pJS.particles.move.enable = true;
+        pJS.fn.particlesRefresh(); //CLAVE
+        particlesActive = true;
+    }
+});

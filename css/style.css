@@ -46,7 +46,7 @@
      align-items: center;
      z-index: 1000;
      background: rgba(5, 5, 5, 0.8);
-     backdrop-filter: blur(15px);
+     backdrop-filter: blur(8px);
      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
  }
 
@@ -110,9 +110,6 @@
      justify-content: center;
      padding: 0 10%;
      margin-top: 1rem;
-     /* Aísla la sección para que el scroll sea independiente y rápido */
-    contain: strict;
-  
  }
 
  .hero-subtitle {
