@@ -85,3 +85,40 @@ navItems.forEach(link => {
         navLinks.classList.remove('active');
     });
 });
+
+
+
+
+/* Inicializamos usando el ID 'hero-canvas ESTO ES PARA LAS PARTICULAS DEL BANNER' */
+particlesJS('hero-canvas', {
+    "particles": {
+            "number": { "value": 150,  /* Aumentado de 80 a 150 para más densidad */
+            "density": { "enable": true, "value_area": 800 }
+        },
+        "color": { "value": "#0066ff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 3, "random": true },
+        "line_linked": {
+            "enable": true,
+            "distance": 180,
+            "color": "#0066ff",
+            "opacity": 0.4,
+            "width": 1
+        },
+        "move": {
+            "enable": true,
+            "speed": 3,
+            "direction": "none",
+            "out_mode": "out"
+        }
+    },
+    "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+            "onhover": { "enable": true, "mode": "grab" },
+            "onclick": { "enable": true, "mode": "push" }
+        }
+    },
+    "retina_detect": true
+});
