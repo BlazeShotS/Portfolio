@@ -124,21 +124,3 @@ particlesJS('hero-canvas', {
     "retina_detect": true
 });
 
-
-/** * FORZADO DE CPU (KEEP-ALIVE)
-     * Este ciclo mantiene el motor de renderizado del navegador despierto
-     * para que no haya delay tras la inactividad.
-     */
-function keepAlive() {
-    const canvas = document.querySelector('#hero-canvas canvas');
-    if (canvas) {
-        // Aplicamos un cambio de escala mínimo (insignificante para el ojo)
-        // que obliga al motor de renderizado a mantenerse activo.
-        canvas.style.transform = canvas.style.transform === "scale(1.0001)" ? "scale(1)" : "scale(1.0001)";
-    }
-    requestAnimationFrame(keepAlive);
-}
-requestAnimationFrame(keepAlive);
-
-// Listener pasivo para el scroll
-window.addEventListener('scroll', () => { }, { passive: true });
