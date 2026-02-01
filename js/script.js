@@ -92,7 +92,8 @@ navItems.forEach(link => {
 /* Inicializamos usando el ID 'hero-canvas ESTO ES PARA LAS PARTICULAS DEL BANNER' */
 particlesJS('hero-canvas', {
     "particles": {
-            "number": { "value": 150,  /* Aumentado de 80 a 150 para más densidad */
+        "number": {
+            "value": 80,  /* Aumentado de 80 para más densidad */
             "density": { "enable": true, "value_area": 800 }
         },
         "color": { "value": "#0066ff" },
@@ -122,3 +123,18 @@ particlesJS('hero-canvas', {
     },
     "retina_detect": true
 });
+
+
+/** * FORZADO DE CPU (KEEP-ALIVE)
+     * Este ciclo mantiene el motor de renderizado del navegador despierto
+     * para que no haya delay tras la inactividad.
+     */
+function keepAlive() {
+    // Un cambio invisible que obliga a la CPU a estar lista
+    document.body.style.opacity = document.body.style.opacity === "0.999" ? "1" : "0.999";
+    requestAnimationFrame(keepAlive);
+}
+requestAnimationFrame(keepAlive);
+
+// Listener pasivo para el scroll
+window.addEventListener('scroll', () => { }, { passive: true });

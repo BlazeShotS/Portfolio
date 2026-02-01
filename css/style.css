@@ -20,14 +20,17 @@
      color: var(--text-main);
      font-family: var(--font-main);
      line-height: 1.6;
-     overflow-x: hidden;
-     scroll-behavior: smooth;
+ 
  }
 
  html,
  body {
      width: 100%;
      overflow-x: hidden;
+ }
+
+ html {
+     scroll-behavior: auto !important;
  }
 
 
@@ -47,15 +50,6 @@
      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
  }
 
- .logo {
-     font-size: 1.2rem;
-     font-weight: 800;
-     letter-spacing: -1px;
- }
-
- .logo span {
-     color: var(--primary);
- }
 
  .nav-right {
      display: flex;
@@ -116,6 +110,9 @@
      justify-content: center;
      padding: 0 10%;
      margin-top: 1rem;
+     /* Aísla la sección para que el scroll sea independiente y rápido */
+    contain: strict;
+  
  }
 
  .hero-subtitle {
@@ -172,15 +169,14 @@
      width: 100%;
      height: 100%;
      z-index: 1;
-
  }
 
  /* Contenido (Encima de todo) */
  .hero>*:not(#hero-canvas):not(.hero-overlay) {
      position: relative;
      z-index: 3;
-    /* CLAVE: Hace que el texto sea "transparente" a los clics */
-    pointer-events: none;
+     /* CLAVE: Hace que el texto sea "transparente" a los clics */
+     pointer-events: none;
  }
 
 
@@ -498,22 +494,23 @@
      border-radius: 4px;
  }
 
-  .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
+ .project-tags {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 0.5rem;
+     margin-bottom: 1rem;
+ }
 
-        .tag {
-            background: rgba(0, 102, 255, 0.1);
-            color: var(--primary-blue);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: bold;
-            border: 1px solid rgba(0, 102, 255, 0.3);
-        }
+ .tag {
+     background: #0F1929;
+     color: var(--primary-blue);
+     padding: 0.3rem 0.8rem;
+     border-radius: 20px;
+     font-size: 0.75rem;
+     font-weight: bold;
+     border: 1px solid rgba(0, 102, 255, 0.3);
+     color: #0066ff;
+ }
 
  /*---CONTACTANOS--*/
 
